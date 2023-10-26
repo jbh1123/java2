@@ -31,7 +31,12 @@ public class Main {
     }
 
     private static void ex3() {
-        System.out.println("Todo...");
+        var n1 = new AwesomeNumber(4);
+        var n2 = new AwesomeNumber(2);
+        var result1 = AwesomeNumber.add(n1, n2);
+        var result2 = AwesomeNumber.subtract(n1, n2);
+        System.out.println(result1);
+        System.out.println(result2);
     }
 
     private static void ex4() {
