@@ -3,8 +3,8 @@ public class Main {
 //        ex1();
 //        ex2();
 //         ex3();
-         ex4();
-        // ex5();
+//         ex4();
+         ex5();
     }
 
     private static void ex1() {
@@ -54,6 +54,24 @@ public class Main {
     }
 
     private static void ex5() {
-        System.out.println("Todo....");
+        var shoppingCart = new ShoppingCart();
+        shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
+        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        System.out.println(shoppingCart.getTotal());
+
+        System.out.println("Now including shipping charge of $5.00 for order totals less than $10.00 and 10% sales tax.");
+        var shoppingCart2 = new ShoppingCart(5.00);
+        shoppingCart2.addItem(new Item(2.00F, 4, "Socks"));
+        shoppingCart2.calculateTotal();
+        System.out.println(shoppingCart2.getTotal());
+
+        System.out.println("\nPart C: Invoice");
+        var shoppingCart3 = new ShoppingCart(5.00);
+        shoppingCart3.addItem(new Item(2.00F, 4, "Socks"));
+//        shoppingCart3.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart3.calculateTotal();
+        var invoice = shoppingCart3.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
+        System.out.println(invoice);
     }
 }
