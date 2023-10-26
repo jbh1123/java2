@@ -59,5 +59,11 @@ public class Main {
         shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
         shoppingCart.calculateTotal();
         System.out.println(shoppingCart.getTotal());
+
+        System.out.println("Now including shipping charge of $5.00 for order totals less than $10.00 and 10% sales tax.");
+        var shoppingCart2 = new ShoppingCart(5.00);
+        shoppingCart2.addItem(new Item(2.00F, 4, "Socks"));
+        shoppingCart2.calculateTotal();
+        System.out.println(shoppingCart2.getTotal());
     }
 }
