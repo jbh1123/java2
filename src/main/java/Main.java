@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        ex1();
-        // ex2();
-        // ex3();
+//        ex1();
+//        ex2();
+         ex3();
         // ex4();
         // ex5();
     }
@@ -24,7 +24,10 @@ public class Main {
     }
 
     private static void ex2() {
-        System.out.println("Todo...");
+        var someDog = new Dog((byte) 2);
+        var someCat = new Cat((byte) 5);
+        System.out.println(someDog);
+        System.out.println(someCat);
     }
 
     private static void ex3() {

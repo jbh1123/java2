@@ -1,37 +1,30 @@
-public class Person
+public class Person extends Animal
 {
     private String firstName;
     private String lastName;
-    private byte age = 0;
     private int id = 0;
     private static int personCount = 0;
 
     public Person() {
+        super();
         this.firstName = null;
         this.lastName = null;
         personCount++;
     }
 
     public Person(String firstName, String lastName, byte age, int id) {
+        super(age);
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
         this.id = id;
         personCount++;
     }
 
     public Person(String firstName, String lastName) {
+        super();
         this.firstName = firstName;
         this.lastName = lastName;
         personCount++;
-    }
-
-    public byte getAge() {
-        return age;
-    }
-
-    public void setAge(byte age) {
-        this.age = age;
     }
 
     public String getName() {
@@ -60,8 +53,8 @@ public class Person
         if ( firstName!=null && lastName!=null ) {
             sB.append("My name is " + firstName + " " + lastName);
         }
-        if ( age != 0 ) {
-            sB.append(" and I am " + age + " years old.");
+        if ( getAge() != 0 ) {
+            sB.append(" and I am " + getAge() + " years old.");
         }
         else {
             sB.append(".");
